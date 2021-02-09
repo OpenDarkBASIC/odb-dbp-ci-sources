@@ -1,5 +1,4 @@
-The CI program scans  this  repository  for all files ending in ```.dba``` and
-```.stdout```.
+The CI program scans  this  repository  for all files ending in ```.dba```.
 
 The  filename  encodes  how  the  result should be interpreted. ```c```  means
 "compile",  ```r```  means "run", ```y``` means "yes" and ```n``` means  "no".
@@ -20,12 +19,19 @@ specify what the runtime behavior should be.
   file should start with ```cy-rn-```
 
 
-If  the snippet only compiles on one compiler, then we must also  specify  the
-expected output by creating an identically named file ending in ```.stdout```.
-For  example, if our snippet should only compile  with  odbc,  then  we  would
-create the two files:
+If the snippet only compiles on one compiler, or if  the  runtime  behavior is
+different between odbc and dbpc, then we must also specify the expected output
+by creating an identically  named  file  ending in either ```.out``` or in the
+case of multiple  different  behaviors,  ```.dbpout```  and ```.odbout```. For
+example, if our snippet should only  compile  with  odbc, then we would create
+the two files:
   + odbc-description of test.dba
-  + odbc-description of test.stdout
+  + odbc-description of test.out
+If our snippet compiles on both but has  different  runtime  behavior, then we
+would create the three files:
+  + cy-rn-description of test.dba
+  + cy-rn-description of test.dbpout
+  + cy-rn-description of test.odbout
 
 Everything  after the initial encoding (and before the file extension)  should
 be a description of what the snippet is trying to test. This is usually just a
