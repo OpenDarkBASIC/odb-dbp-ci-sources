@@ -1,0 +1,10 @@
+select value()
+endselect
+
+end
+
+function value()
+    print "value()"
+    result = 2
+endfunction result
+
