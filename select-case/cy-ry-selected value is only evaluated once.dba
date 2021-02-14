@@ -1,0 +1,16 @@
+select value()
+    case 1
+        print "case 1"
+    endcase
+    case 2
+        print "case 2"
+    endcase
+endselect
+
+end
+
+function value()
+    print "value()"
+    result = 2
+endfunction result
+
