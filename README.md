@@ -27,6 +27,7 @@ example, if our snippet should only  compile  with  odbc, then we would create
 the two files:
   + odbc-description of test.dba
   + odbc-description of test.out
+
 If our snippet compiles on both but has  different  runtime  behavior, then we
 would create the three files:
   + cy-rn-description of test.dba
