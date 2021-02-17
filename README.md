@@ -18,7 +18,6 @@ specify what the runtime behavior should be.
   + To assert a snippet's output must be  different  between  odbc and dbpc, the
   file should start with ```cy-rn-```
 
-
 If the snippet only compiles on one compiler, or if  the  runtime  behavior is
 different between odbc and dbpc, then we must also specify the expected output
 by creating an identically  named  file  ending in either ```.out``` or in the
